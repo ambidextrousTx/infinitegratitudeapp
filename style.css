@@ -224,8 +224,11 @@ a:hover {
     box-sizing: border-box;
 }
 
+#showcase {
+    margin: 0 auto;
+}
+
 #showcase .container {
-    padding: 60px 0;
     overflow: hidden;
 }
 
@@ -269,7 +272,8 @@ a:hover {
     text-align: center;
     font-size: 0.9rem;
     color: var(--text-secondary);
-    margin-top: 1rem;
+    opacity: 0.6;
+    margin-top: 0px;
 }
 
 /* Desktop Refinement */
@@ -282,7 +286,7 @@ a:hover {
         display: flex;
         justify-content: flex-start;
         gap: 40px;
-        padding: 0 100px;
+        margin-bottom: 40px;
     }
 
     .app-screenshot {
@@ -291,7 +295,4 @@ a:hover {
         scroll-snap-align: start;
     }
     
-    .scroll-hint {
-        display: none; /* Hide hint on desktop where scrollbars might appear */
-    }
 }
