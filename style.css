@@ -225,11 +225,32 @@ a:hover {
 }
 
 #showcase {
+    position: relative;
     margin: 0 auto;
+    width: 100%;
 }
 
-#showcase .container {
-    overflow: hidden;
+#showcase::before,
+#showcase::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    z-index: 5; /* Force it to be the top layer */
+    pointer-events: none; /* So users can still click through it */
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+#showcase::before {
+    left: 0;
+    background: linear-gradient(to left, transparent, var(--bg));
+}
+
+#showcase::after {
+    right: 0;
+    background: linear-gradient(to right, transparent, var(--bg));
 }
 
 .scroll-container {
@@ -245,10 +266,6 @@ a:hover {
 
 .scroll-container:active {
     cursor: grabbing;
-}
-
-.scroll-container::-webkit-scrollbar {
-    display: none; /* Chrome/Safari */
 }
 
 .screenshot-wrapper {
@@ -282,9 +299,27 @@ a:hover {
 }
 
 /* Desktop Refinement */
+/* Show an elegant minimalistic scrollbar for PCs which cannot swipe, unlike phones and trackpads */
 @media (min-width: 768px) {
     .scroll-container {
         margin: 0 auto;
+        scrollbar-width: thin; /* Firefox */
+        scrollbar-color: var(--accent-electron-blue) transparent; /* Firefox */
+        padding-bottom: 20px;
+    }
+
+    .scroll-container::-webkit-scrollbar {
+        display: block; /* Show it on Chrome/Safari */
+        height: 6px;
+    }
+
+    .scroll-container::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .scroll-container::-webkit-scrollbar-thumb {
+        background-color: var(--accent-electron-blue);
+        border-radius: 10px;
     }
 
     .screenshot-wrapper {
