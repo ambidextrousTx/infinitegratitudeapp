@@ -293,6 +293,10 @@ a:hover {
     margin-top: 0px;
 }
 
+#footnote {
+    font-size: 0.6rem;
+}
+
 /* Desktop Refinement */
 /* Show an elegant minimalistic scrollbar for PCs which cannot swipe, unlike phones and trackpads */
 @media (min-width: 768px) {
