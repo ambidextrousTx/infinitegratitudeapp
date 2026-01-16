@@ -121,23 +121,6 @@ h2, h3 {
 .feature-grid li:nth-child(9)::before { background-color: var(--accent-prunus-avium); }
 .feature-grid li:nth-child(10)::before { background-color: var(--accent-american-river); }
 
-a {
-  color: var(--accent-sour-lemon)
-}
-
-/* Keep showing as link even if visited */
-a:visited {
-  color: var(--accent-sour-lemon)
-}
-
-a:active {
-  color: var(--accent-green-darner-tail)
-}
-
-/* Must keep below others to enable */
-a:hover {
-  color: var(--accent-prunus-avium)
-}
 
 .subheading {
   margin-top: 5px;
@@ -211,9 +194,20 @@ a:hover {
     transition: transform 0.2s ease, filter 0.2s ease;
 }
 
+/* Keep showing as link even if visited */
+cta-button:visited {
+  color: var(--accent-sour-lemon)
+}
+
+cta-button:active {
+  color: var(--accent-green-darner-tail)
+}
+
+/* Must keep below others to enable */
 .cta-button:hover {
     transform: scale(1.05);
     filter: brightness(1.1);
+  color: var(--accent-prunus-avium)
 }
 
 .container {
@@ -235,7 +229,7 @@ a:hover {
     content: "";
     position: absolute;
     top: 0;
-    width: 100px;
+    width: 50px;
     height: 100%;
     z-index: 5; /* Force it to be the top layer */
     pointer-events: none; /* So users can still click through it */
