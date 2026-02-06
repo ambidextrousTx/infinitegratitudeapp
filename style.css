@@ -298,6 +298,43 @@ cta-button:active {
     font-size: 0.6rem;
 }
 
+/* Subpage Header & Navigation */
+.subpage-header {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--text-secondary);
+    margin-bottom: 40px;
+    opacity: 0.8;
+}
+
+.back-link {
+    text-decoration: none;
+    color: var(--accent-blue);
+    font-family: "Avenir Next", Avenir, sans-serif;
+    font-weight: 600;
+    transition: transform 0.2s ease;
+    display: inline-block;
+}
+
+.back-link:hover {
+    transform: translateX(-5px); /* Subtle "nudge" effect */
+}
+
+/* Legal Page Content Alignment */
+.legal-page {
+    max-width: 800px; /* Slightly narrower for better readability of long text */
+    margin: 0 auto;
+    padding-bottom: 80px;
+}
+
+.legal-page h1 {
+    margin-bottom: 30px;
+}
+
+.legal-page p, .legal-page li {
+    margin-bottom: 1.5rem;
+    color: var(--text-secondary);
+}
+
 /* Desktop Refinement */
 /* Show an elegant minimalistic scrollbar for PCs which cannot swipe, unlike phones and trackpads */
 @media (min-width: 768px) {
