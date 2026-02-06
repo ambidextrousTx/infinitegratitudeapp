@@ -306,13 +306,32 @@ cta-button:active {
     opacity: 0.8;
 }
 
+.nav-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    height: 40px;
+    width: auto;
+    display: block;
+}
+
+.logo-link {
+    transition: opacity 0.2s ease;
+}
+
+.logo-link:hover {
+    opacity: 0.8;
+}
+
 .back-link {
     text-decoration: none;
-    color: var(--accent-blue);
+    color: var(--accent-electron-blue);
     font-family: "Avenir Next", Avenir, sans-serif;
     font-weight: 600;
     transition: transform 0.2s ease;
-    display: inline-block;
 }
 
 .back-link:hover {
@@ -372,4 +391,9 @@ cta-button:active {
         scroll-snap-align: start;
     }
     
+}
+
+/* Very small screens*/
+@media (max-width: 480px) {
+    .back-link { font-size: 0.8rem; }
 }
