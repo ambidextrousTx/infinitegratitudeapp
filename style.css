@@ -298,6 +298,91 @@ cta-button:active {
     font-size: 0.6rem;
 }
 
+.site-footer {
+    padding: 60px 0 40px;
+    border-top: 1px solid rgba(128, 128, 128, 0.1); /* Very subtle line */
+    margin-top: 100px;
+    background-color: var(--bg);
+}
+
+.footer-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap; /* Essential for mobile */
+    gap: 30px;
+}
+
+/* Brand Section */
+.footer-logo-text {
+    font-family: Georgia, serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--text-primary);
+    display: block;
+    margin-bottom: 8px;
+}
+
+.copyright {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* Navigation Section */
+.footer-nav {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: var(--accent-electron-blue);
+}
+
+/* Social Link */
+.social-link {
+    color: var(--text-secondary);
+    transition: transform 0.2s ease, color 0.2s ease;
+    display: flex;
+    align-items: center;
+}
+
+.social-link:hover {
+    color: var(--accent-prunus-avium);
+    transform: translateY(-3px);
+}
+
+/* Mobile Tweak */
+@media (max-width: 768px) {
+    .footer-flex {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .footer-nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
 /* Subpage Header & Navigation */
 .subpage-header {
     padding: 20px 0;
