@@ -150,7 +150,7 @@
             <div class="container footer-flex">
                 <div class="footer-brand">
                     <span class="footer-logo-text">Infinite Gratitude™</span>
-                    <p class="copyright">&copy; 2026 <a href="https://linktr.ee/ravisinha" target="_blank">Ravi S Sinha</a>. All rights reserved.</p>
+                    <p class="copyright">&copy; <span id="year"></span> <a href="https://linktr.ee/ravisinha" target="_blank">Ravi S Sinha</a>. All rights reserved.</p>
                     <p class="copyright">Infinite Gratitude™ is a trademark of Ravi S Sinha</p>
                 </div>
 
@@ -171,6 +171,8 @@
                 </nav>
             </div>
         </footer>
-
+        <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
 </body>
 </html>
